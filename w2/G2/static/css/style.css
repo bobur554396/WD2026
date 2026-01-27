@@ -1,0 +1,54 @@
+.image {
+    border: 3px solid blue;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    margin-top: 20px;
+    /* padding-top: 20px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px; */
+    /* padding: 20px; */
+    /* padding: 20px 5px; top-bottom | left-right */
+    /* padding: 20px 5px 40px 60px; top | right | bottom | left */
+}
+
+.image:hover {
+    border-radius: 30px;
+}
+
+.img2 {
+    border-color: red;  /* overrideing the previous border color */
+}
+
+h3 {
+    color: green;
+}
+body h3#h3_1 {
+    color: purple;
+}
+h1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: gray;
+}
+
+h4 {
+    display: none;
+}
+
+
+.container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray;
+    height: 200px;
+}
+
+.item {
+    padding: 10px;
+    flex: 1;
+    background-color: red;
+}
