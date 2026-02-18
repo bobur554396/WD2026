@@ -1,0 +1,66 @@
+<h1>Hello {{ title }} {{ 1 + 1 }}</h1>
+
+<ul>
+  @for(number of numbers; track number){
+    <li>{{number}}</li>
+  } @empty {
+    <li>No any numbers</li>
+  }
+</ul>
+
+<table border>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Age</th>
+    <th>GPA</th>
+  </tr>
+  @for(student of students; track student.id){
+    <tr>
+      <td>{{student.id}}</td>
+      <td>{{student.name}}</td>
+      <td>{{student.age}}</td>
+      <td>{{student.gpa}}</td>
+    </tr>
+  }
+</table>
+
+<hr />
+
+<h3>Counter</h3>
+<p>{{count}}</p>
+<button (click)="incClicked()">Inc</button>
+<button (click)="decClicked()">Dec</button>
+
+<hr />
+<h3>Conditional statements</h3>
+@if(isLoggedIn) {
+  <p>{{message}}</p>
+  <button (click)="logout()">Logout</button>
+} @else {
+  <p>User is not logged in</p>
+  <button (click)="login()">Login</button>
+}
+
+<hr />
+<h1>Two way data binding</h1>
+<input type="text" [(ngModel)]="newTask">
+<!--<p>{{newTask}}</p>-->
+<button (click)="addTask()">Add task</button>
+
+
+<ol>
+  @for(task of tasks; track task){
+    <li>
+      {{task}}
+<!--      {{$index}}-->
+      <button>x</button>
+      <button>edit</button>
+    </li>
+  } @empty {
+    <li>No tasks added yet</li>
+  }
+</ol>
+
+
+
