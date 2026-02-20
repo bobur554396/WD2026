@@ -1,0 +1,26 @@
+.task-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  margin: 4px 0;
+  background: #f9f9f9;
+  border-radius: 8px;
+  list-style: none;
+}
+.task-text {
+  margin-right: 10px;
+  font-size: 18px;
+}
+.task-time {
+  font-size: 12px;
+  color: #888;
+}
+.delete-btn {
+  background: #ff4444;
+  color: white;
+  border: none;
+  border-radius: 7px;
+  height: 30px;
+  cursor: pointer;
+}

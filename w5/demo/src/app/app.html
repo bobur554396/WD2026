@@ -1,0 +1,58 @@
+<h1>Hello {{ title }} {{ 1 + 2 }}</h1>
+
+<ul>
+  @for (number of numbers; track number) {
+    <li>{{ number }}</li>
+  } @empty {
+    <li>No numbers added yet</li>
+  }
+</ul>
+
+<hr />
+
+<h2>Students</h2>
+
+@for (student of students; track student) {
+  <app-student-card
+    [student]="student"
+    (delete)="deleteStudent($event)"/>
+} @empty {
+  <p>No Students added yet</p>
+}
+
+
+<!--<table border="1">-->
+<!--  <tr>-->
+<!--    <th>ID</th>-->
+<!--    <th>Name</th>-->
+<!--    <th>Email</th>-->
+<!--  </tr>-->
+<!--  @for (student of students; track student) {-->
+<!--    <tr>-->
+<!--      <td>{{ student.id }}</td>-->
+<!--      <td>{{ student.name }}</td>-->
+<!--      <td>{{ student.email }}</td>-->
+<!--    </tr>-->
+<!--  } @empty {-->
+<!--    <p>No Students added yet</p>-->
+<!--  }-->
+<!--</table>-->
+
+<hr />
+<h2>Conditional statement</h2>
+
+@if(!isLoggedIn){
+  <h3>Login page</h3>
+  <label for="username">Username: </label>
+  <input type="text" id="username"> <br />
+  <label for="password">Password: </label>
+  <input type="password" id="password"><br />
+  <button (click)="login()">Login</button>
+} @else {
+  <h3>Welcome to KBTU/SITE</h3>
+  <button (click)="logout()">Logout</button>
+}
+
+<hr />
+
+<app-task-list />
