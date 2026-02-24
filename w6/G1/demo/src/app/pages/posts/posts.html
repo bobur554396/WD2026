@@ -1,0 +1,18 @@
+<h2>All Posts</h2>
+
+@if (loading()) {
+  <p>Loading posts...</p>
+} @else if (error()) {
+  <p style="color: red;">{{ error() }}</p>
+} @else {
+  <p>{{ posts().length }} posts loaded</p>
+  <ul>
+    @for (post of posts(); track post.id) {
+      <li>
+        <a [routerLink]="['/posts', post.id]">
+          {{ post.id }} — {{ post.title }}
+        </a>
+      </li>
+    }
+  </ul>
+}
