@@ -1,0 +1,10 @@
+@if(loading()){
+  <p>Post info is loading...</p>
+} @else {
+  @if(post(); as p){
+    <h3>ID: {{p.id}}</h3>
+    <h4>{{p.title}}</h4>
+    <p>{{p.body}}</p>
+  }
+  <a routerLink="/posts"><- Back to Posts</a>
+}
