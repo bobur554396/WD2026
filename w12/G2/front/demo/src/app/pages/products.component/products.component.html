@@ -1,0 +1,14 @@
+@if(loading()){
+  <p>Products are loading...</p>
+} @else {
+  <ul class="product-list">
+    @for(product of products(); track product.id){
+      <li class="product-item">
+        <a>
+          {{product.id}} - {{product.name}} - {{product.price}}
+          <span style="font-size: 12px; color: gray">{{product.category.name}}</span>
+        </a>
+      </li>
+    }
+  </ul>
+}
