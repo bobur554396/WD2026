@@ -1,0 +1,8 @@
+@if (post(); as p) {
+  <h3>Post #{{ p.id }}</h3>
+  <h4>{{ p.title }}</h4>
+  <p>{{ p.body }}</p>
+  <a routerLink="/posts">Back</a>
+} @else {
+  <p>Post not found.</p>
+}

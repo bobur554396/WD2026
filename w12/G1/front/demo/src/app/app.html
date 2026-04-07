@@ -1,0 +1,25 @@
+<h1>KBTU SITE</h1>
+
+
+@if (!logged()){
+  <div class="login-form">
+    <label for="username">Username:</label>
+    <input type="text" [(ngModel)]="username" id="username">
+    <label for="password">Password:</label>
+    <input type="password" [(ngModel)]="password" id="password">
+    <button (click)="login()">Login</button>
+  </div>
+} @else {
+  <nav>
+    <a routerLink="/home" routerLinkActive="active">Home</a>
+    <a routerLink="/about" routerLinkActive="active">About</a>
+    <a routerLink="/posts" routerLinkActive="active">Posts</a>
+  </nav>
+
+  <button (click)="logout()">Logout</button>
+
+  <main>
+    <router-outlet />
+  </main>
+}
+
