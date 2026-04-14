@@ -1,0 +1,17 @@
+<h2>Posts</h2>
+<input type="text">
+<button>Add Post</button>
+@if (loading()) {
+  <p>Posts are loading...</p>
+} @else {
+  <ul>
+    @for (post of posts(); track post.id) {
+      <li>
+        <a [routerLink]="['/posts', post.id]">
+          {{ post.id }} - {{ post.title }}
+        </a>
+        <button>x</button>
+      </li>
+    }
+  </ul>
+}
