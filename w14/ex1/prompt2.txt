@@ -1,0 +1,11 @@
+prompt engineering
+
+
+
+First create django project = "blog app". Inside create 
+a DRF ModelSerializer and ListCreateAPIView
+for a BlogPost model with fields: title (CharField),
+content (TextField), author (ForeignKey to Djnago User),
+created_at (auto). Include validation that title
+must be at least 5 characters. Configure admin panel 
+and create one superuser admin / asdasdasd.
